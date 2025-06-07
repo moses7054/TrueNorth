@@ -1,0 +1,10 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+This is a nextjs app router repo.
+Create a very simple static website for a construction company.
+Use shadcn ui components. Keep it simple and elegant.
+Has 4 pages - home, services, contact us, about us.
+Services offered are:- planning, construction, tile work, AC, electrical, plumbing, wielding, grill work, carpentry work, painting.
