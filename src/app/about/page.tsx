@@ -63,7 +63,7 @@ export default function About() {
           <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
           <p className="text-lg text-gray-200">
             To provide exceptional construction and renovation services that
-            exceed our clients' expectations, while maintaining the highest
+            exceed our clients`&apos;` expectations, while maintaining the highest
             standards of quality, safety, and professionalism.
           </p>
         </motion.div>

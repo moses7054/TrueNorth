@@ -8,7 +8,7 @@ const containerVariants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.1,
+      // staggerChildren: 0.1,
     },
   },
 };
@@ -18,7 +18,7 @@ const itemVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.4, ease: "easeOut" },
+    transition: { duration: 1, ease: "easeOut" },
   },
 };
 
@@ -26,43 +26,20 @@ export default function Home() {
   return (
     <div className="space-y-32">
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-gradient-to-br from-[#1a365d] via-[#2c5282] to-[#1a365d]">
-        {/* Animated Background Elements */}
-        <div className="absolute inset-0 bg-grid-white/[0.02] bg-[length:30px_30px]" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#1a365d]/30" />
+      <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+        {/* Background Grid */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff10_1px,transparent_1px),linear-gradient(to_bottom,#ffffff10_1px,transparent_1px)] bg-[size:3rem_3rem]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/50 to-gray-900" />
+        </div>
 
-        {/* Floating Elements */}
-        <motion.div
-          className="absolute top-1/4 left-1/4 w-[800px] h-[800px] bg-blue-400/5 rounded-full blur-3xl"
-          animate={{
-            scale: [1, 1.2, 1],
-            opacity: [0.2, 0.3, 0.2],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-        <motion.div
-          className="absolute bottom-1/4 right-1/4 w-[1000px] h-[1000px] bg-blue-300/5 rounded-full blur-3xl"
-          animate={{
-            scale: [1.2, 1, 1.2],
-            opacity: [0.3, 0.2, 0.3],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-
-        <div className="w-full relative">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Main Content */}
+        <div className="w-full relative container mx-auto pt-16">
+          <div className="w-full px-8 sm:px-12 lg:px-16">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
               {/* Left Column - Text Content */}
               <motion.div
-                className="text-white space-y-8 lg:col-span-6"
+                className="text-white space-y-8 lg:col-span-7"
                 initial="hidden"
                 animate="visible"
                 variants={containerVariants}
@@ -78,13 +55,13 @@ export default function Home() {
                   </motion.span>
                   <motion.h1
                     variants={itemVariants}
-                    className="text-5xl md:text-7xl font-bold tracking-tight leading-tight"
+                    className="text-5xl md:text-7xl font-bold tracking-tight leading-tight bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent"
                   >
                     Crafting Your Vision Into Reality
                   </motion.h1>
                   <motion.p
                     variants={itemVariants}
-                    className="text-xl text-gray-200/90 max-w-2xl leading-relaxed"
+                    className="text-xl text-gray-300 max-w-2xl leading-relaxed"
                   >
                     True North Construction delivers excellence in construction,
                     renovation, and maintenance services. Your trusted partner
@@ -98,7 +75,7 @@ export default function Home() {
                 >
                   <Link
                     href="/contact"
-                    className="inline-flex items-center px-8 py-4 bg-white text-[#1a365d] rounded-lg hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl font-medium group"
+                    className="inline-flex items-center px-8 py-4 bg-white text-gray-900 rounded-lg hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl font-medium group"
                   >
                     Get Started
                     <svg
@@ -147,75 +124,24 @@ export default function Home() {
                     { number: "100%", label: "Client Satisfaction" },
                   ].map((stat) => (
                     <div key={stat.label} className="text-center">
-                      <div className="text-3xl font-bold mb-2 bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">
+                      <div className="text-3xl font-bold mb-2 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
                         {stat.number}
                       </div>
-                      <div className="text-sm text-gray-300/80">
-                        {stat.label}
-                      </div>
+                      <div className="text-sm text-gray-400">{stat.label}</div>
                     </div>
                   ))}
                 </motion.div>
               </motion.div>
 
-              {/* Right Column - Decorative Elements */}
-              <motion.div
-                className="relative hidden lg:block lg:col-span-6"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-              >
-                <div className="relative">
-                  {/* Decorative Circles */}
-                  <motion.div
-                    className="absolute top-0 right-0 w-64 h-64 rounded-full bg-blue-400/10 blur-2xl"
-                    animate={{
-                      scale: [1, 1.2, 1],
-                      opacity: [0.3, 0.5, 0.3],
-                    }}
-                    transition={{
-                      duration: 6,
-                      repeat: Infinity,
-                      ease: "easeInOut",
-                    }}
-                  />
-                  <motion.div
-                    className="absolute bottom-0 left-0 w-72 h-72 rounded-full bg-purple-400/10 blur-2xl"
-                    animate={{
-                      scale: [1.2, 1, 1.2],
-                      opacity: [0.4, 0.6, 0.4],
-                    }}
-                    transition={{
-                      duration: 7,
-                      repeat: Infinity,
-                      ease: "easeInOut",
-                    }}
-                  />
-
-                  {/* Decorative Lines */}
-                  <div className="absolute inset-0">
-                    <motion.div
-                      className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"
-                      initial={{ scaleX: 0, opacity: 0 }}
-                      animate={{ scaleX: 1, opacity: 1 }}
-                      transition={{ delay: 0.5, duration: 1 }}
-                    />
-                    <motion.div
-                      className="absolute top-0 left-1/2 h-full w-px bg-gradient-to-b from-transparent via-white/20 to-transparent"
-                      initial={{ scaleY: 0, opacity: 0 }}
-                      animate={{ scaleY: 1, opacity: 1 }}
-                      transition={{ delay: 0.7, duration: 1 }}
-                    />
-                  </div>
-                </div>
-              </motion.div>
+              {/* Right Column - Empty Space */}
+              <div className="hidden lg:block lg:col-span-5" />
             </div>
           </div>
         </div>
       </section>
 
       {/* Featured Services */}
-      <section className="container mx-auto px-4">
+      <section className="container mx-auto px-4 ">
         <motion.div
           className="text-center mb-16"
           initial="hidden"
@@ -265,7 +191,7 @@ export default function Home() {
             <motion.div
               key={service.title}
               variants={itemVariants}
-              className="group p-8 bg-white rounded-2xl hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-[#1a365d]/20"
+              className="group p-8 bg-white rounded-2xl hover:shadow-md transition-all duration-300 border border-gray-100 hover:border-[#1a365d]/20 hover:cursor-pointer"
             >
               <div className="h-12 w-12 bg-[#1a365d]/10 rounded-lg mb-6 flex items-center justify-center group-hover:bg-[#1a365d] group-hover:text-white transition-all duration-300">
                 <svg
@@ -292,7 +218,7 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="bg-gray-50 py-24">
+      <section className="bg-gray-50 py-36 ">
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
@@ -340,7 +266,7 @@ export default function Home() {
               <motion.div
                 key={feature.title}
                 variants={itemVariants}
-                className="bg-white p-8 rounded-2xl hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-[#1a365d]/20"
+                className="bg-white p-8 rounded-2xl hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-[#1a365d]/20 hover:cursor-pointer"
               >
                 <h3 className="text-xl font-semibold mb-3 text-[#1a365d] group-hover:text-[#2c5282] transition-colors">
                   {feature.title}

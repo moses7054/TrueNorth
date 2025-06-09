@@ -8,7 +8,8 @@ const containerVariants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.1,
+      when: "beforeChildren",
+      staggerChildren: 0.2,
     },
   },
 };
@@ -18,7 +19,33 @@ const itemVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.4, ease: "easeOut" },
+    transition: {
+      duration: 1.2,
+      ease: [0.4, 0, 0.2, 1],
+    },
+  },
+};
+
+const componentVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.9,
+      ease: [0.4, 0, 0.2, 1], // Custom easing for smoother motion
+    },
+  },
+};
+
+const servicesContainerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      delayChildren: 0.4, // Delay the service items animation
+      staggerChildren: 0, // Remove stagger effect
+    },
   },
 };
 
@@ -230,7 +257,7 @@ export default function Services() {
         className="text-center mb-16"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true }}
+        viewport={{ once: true, margin: "-100px" }}
         variants={containerVariants}
       >
         <motion.h1
@@ -253,14 +280,14 @@ export default function Services() {
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true }}
-        variants={containerVariants}
+        viewport={{ once: true, margin: "-100px" }}
+        variants={servicesContainerVariants}
       >
         {services.map((service) => (
           <motion.div
             key={service.title}
-            variants={itemVariants}
-            className="group p-8 bg-white rounded-2xl hover:shadow-2xl transition-all duration-300 border border-gray-100"
+            variants={componentVariants}
+            className="group p-8 bg-white rounded-2xl hover:shadow-md transition-all duration-300 border border-gray-100 hover:cursor-pointer"
           >
             <div className="h-12 w-12 bg-[#1a365d]/10 rounded-lg mb-6 flex items-center justify-center group-hover:bg-[#1a365d] group-hover:text-white transition-colors">
               {service.icon}
@@ -269,7 +296,7 @@ export default function Services() {
               {service.title}
             </h3>
             <p className="text-gray-600 mb-6">{service.description}</p>
-            <Link
+            {/* <Link
               href="/contact"
               className="inline-flex items-center text-[#1a365d] font-medium hover:text-[#2c5282] transition-colors"
             >
@@ -287,7 +314,7 @@ export default function Services() {
                   d="M9 5l7 7-7 7"
                 />
               </svg>
-            </Link>
+            </Link> */}
           </motion.div>
         ))}
       </motion.div>
