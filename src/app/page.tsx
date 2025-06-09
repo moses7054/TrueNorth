@@ -34,17 +34,20 @@ export default function Home() {
         </div>
 
         {/* Main Content */}
-        <div className="w-full relative container mx-auto pt-16">
-          <div className="w-full px-8 sm:px-12 lg:px-16">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+        <div className="w-full relative container mx-auto pt-16 pb-8">
+          <div className="w-full px-4 sm:px-12 lg:px-16">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
               {/* Left Column - Text Content */}
               <motion.div
-                className="text-white space-y-8 lg:col-span-7"
+                className="text-white space-y-6 lg:space-y-8 lg:col-span-7"
                 initial="hidden"
                 animate="visible"
                 variants={containerVariants}
               >
-                <motion.div variants={itemVariants} className="space-y-6">
+                <motion.div
+                  variants={itemVariants}
+                  className="space-y-4 lg:space-y-6"
+                >
                   <motion.span
                     className="inline-block px-4 py-2 bg-white/10 rounded-full text-sm font-medium backdrop-blur-sm border border-white/10"
                     initial={{ opacity: 0, x: -20 }}
@@ -55,13 +58,13 @@ export default function Home() {
                   </motion.span>
                   <motion.h1
                     variants={itemVariants}
-                    className="text-5xl md:text-7xl font-bold tracking-tight leading-tight bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent"
+                    className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight leading-tight bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent"
                   >
                     Crafting Your Vision Into Reality
                   </motion.h1>
                   <motion.p
                     variants={itemVariants}
-                    className="text-xl text-gray-300 max-w-2xl leading-relaxed"
+                    className="text-lg md:text-xl text-gray-300 max-w-2xl leading-relaxed"
                   >
                     True North Construction delivers excellence in construction,
                     renovation, and maintenance services. Your trusted partner
@@ -71,11 +74,11 @@ export default function Home() {
 
                 <motion.div
                   variants={itemVariants}
-                  className="flex flex-wrap gap-6"
+                  className="flex flex-wrap gap-4 lg:gap-6"
                 >
                   <Link
                     href="/contact"
-                    className="inline-flex items-center px-8 py-4 bg-white text-gray-900 rounded-lg hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl font-medium group"
+                    className="inline-flex items-center px-6 py-3 lg:px-8 lg:py-4 bg-white text-gray-900 rounded-lg hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl font-medium group"
                   >
                     Get Started
                     <svg
@@ -94,7 +97,7 @@ export default function Home() {
                   </Link>
                   <Link
                     href="/services"
-                    className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white/20 text-white rounded-lg hover:bg-white/10 transition-all duration-300 font-medium group"
+                    className="inline-flex items-center px-6 py-3 lg:px-8 lg:py-4 bg-transparent border-2 border-white/20 text-white rounded-lg hover:bg-white/10 transition-all duration-300 font-medium group"
                   >
                     Explore Services
                     <svg
@@ -116,7 +119,7 @@ export default function Home() {
                 {/* Stats */}
                 <motion.div
                   variants={itemVariants}
-                  className="grid grid-cols-3 gap-8 pt-8 border-t border-white/10"
+                  className="grid grid-cols-3 gap-4 lg:gap-8 pt-6 lg:pt-8 border-t border-white/10"
                 >
                   {[
                     { number: "500+", label: "Projects Completed" },
@@ -124,10 +127,12 @@ export default function Home() {
                     { number: "100%", label: "Client Satisfaction" },
                   ].map((stat) => (
                     <div key={stat.label} className="text-center">
-                      <div className="text-3xl font-bold mb-2 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
+                      <div className="text-2xl lg:text-3xl font-bold mb-1 lg:mb-2 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
                         {stat.number}
                       </div>
-                      <div className="text-sm text-gray-400">{stat.label}</div>
+                      <div className="text-xs lg:text-sm text-gray-400">
+                        {stat.label}
+                      </div>
                     </div>
                   ))}
                 </motion.div>
