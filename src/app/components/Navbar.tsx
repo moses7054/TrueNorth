@@ -150,6 +150,12 @@ export default function Navbar() {
               Services
             </Link>
             <Link
+              href="/gallery"
+              className="text-xl text-white hover:text-gray-200 transition-colors"
+            >
+              Gallery
+            </Link>
+            <Link
               href="/about"
               className="text-xl text-white hover:text-gray-200 transition-colors"
             >
