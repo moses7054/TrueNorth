@@ -36,7 +36,7 @@ export default function About() {
           variants={itemVariants}
           className="text-4xl md:text-5xl font-bold text-[#1a365d] mb-6"
         >
-          About True North Construction
+          About TrueNorth Buildworks
         </motion.h1>
         <motion.p
           variants={itemVariants}
@@ -63,8 +63,8 @@ export default function About() {
           <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
           <p className="text-lg text-gray-200">
             To provide exceptional construction and renovation services that
-            exceed our clients`&apos;` expectations, while maintaining the highest
-            standards of quality, safety, and professionalism.
+            exceed our clients`&apos;` expectations, while maintaining the
+            highest standards of quality, safety, and professionalism.
           </p>
         </motion.div>
       </motion.div>

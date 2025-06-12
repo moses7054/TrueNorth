@@ -66,7 +66,7 @@ export default function Home() {
                     variants={itemVariants}
                     className="text-lg md:text-xl text-gray-300 max-w-2xl leading-relaxed"
                   >
-                    True North Construction delivers excellence in construction,
+                    TrueNorth Buildworks delivers excellence in construction,
                     renovation, and maintenance services. Your trusted partner
                     for all your construction needs.
                   </motion.p>
@@ -236,7 +236,7 @@ export default function Home() {
               variants={itemVariants}
               className="text-3xl md:text-4xl font-bold text-[#1a365d] mb-4"
             >
-              Why Choose True North?
+              Why Choose TrueNorth Buildworks?
             </motion.h2>
             <motion.p
               variants={itemVariants}

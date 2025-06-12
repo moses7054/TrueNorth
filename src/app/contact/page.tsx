@@ -88,7 +88,8 @@ export default function Contact() {
                 <div>
                   <h3 className="font-medium text-[#1a365d]">Address</h3>
                   <p className="text-gray-600">
-                    123 Construction Street, Building City, State 12345
+                    9th Cross, B Block, Subhashnagar, Begur Post, Bangalore -
+                    560068
                   </p>
                 </div>
               </div>
@@ -110,7 +111,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="font-medium text-[#1a365d]">Phone</h3>
-                  <p className="text-gray-600">(555) 123-4567</p>
+                  <p className="text-gray-600">8792292231</p>
                 </div>
               </div>
               <div className="flex items-start space-x-4">
@@ -131,9 +132,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="font-medium text-[#1a365d]">Email</h3>
-                  <p className="text-gray-600">
-                    info@truenorthconstruction.com
-                  </p>
+                  <p className="text-gray-600">info@truenorthbuildworks.com</p>
                 </div>
               </div>
               <div className="flex items-start space-x-4">

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -43,7 +44,12 @@ export default function Navbar() {
               href="/"
               className="text-xl md:text-2xl font-bold text-white hover:text-gray-200 transition-colors"
             >
-              True North
+              <Image
+                src="/logo.jpeg"
+                alt="TrueNorth Logo"
+                width={50}
+                height={50}
+              />
             </Link>
 
             {/* Desktop Navigation */}

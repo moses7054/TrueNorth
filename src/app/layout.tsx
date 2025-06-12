@@ -27,7 +27,7 @@ export default function RootLayout({
               {/* Company Info */}
               <div className="space-y-4">
                 <h3 className="text-xl font-semibold text-[#1a365d]">
-                  True North Construction
+                  TrueNorth Buildworks
                 </h3>
                 <p className="text-gray-600 text-sm">
                   Building excellence, one project at a time. Your trusted
@@ -74,9 +74,12 @@ export default function RootLayout({
                   Contact Us
                 </h4>
                 <ul className="space-y-2 text-sm text-gray-600">
-                  <li>Email: info@truenorth.com</li>
-                  <li>Phone: (123) 456-7890</li>
-                  <li>Address: 123 Construction Ave, City, State</li>
+                  <li>Email: info@truenorthbuildworks.com</li>
+                  <li>Phone: 8792292231</li>
+                  <li>
+                    Address: 9th Cross, B Block, Subhashnagar, Begur Post,
+                    Bangalore - 560068
+                  </li>
                 </ul>
               </div>
             </div>
@@ -84,7 +87,7 @@ export default function RootLayout({
             {/* Copyright */}
             <div className="border-t border-gray-200 mt-8 pt-8 text-center">
               <p className="text-sm text-gray-600">
-                © {new Date().getFullYear()} True North Construction. All rights
+                © {new Date().getFullYear()} TrueNorth Buildworks. All rights
                 reserved.
               </p>
             </div>
