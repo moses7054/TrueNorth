@@ -67,6 +67,12 @@ export default function Navbar() {
                 Services
               </Link>
               <Link
+                href="/gallery"
+                className="text-base text-white hover:text-gray-200 transition-colors"
+              >
+                Gallery
+              </Link>
+              <Link
                 href="/about"
                 className="text-base text-white hover:text-gray-200 transition-colors"
               >
