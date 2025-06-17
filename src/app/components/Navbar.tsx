@@ -38,7 +38,7 @@ export default function Navbar() {
             : "bg-gray-900 backdrop-blur-md"
         }`}
       >
-        <nav className="h-16 pl-[14px] pr-1.5 sm:px-12 lg:px-16">
+        <nav className="h-24 pl-[14px] pr-1.5 sm:px-12 lg:px-16">
           <div className="flex items-center justify-between container mx-auto h-full">
             <Link
               href="/"
@@ -47,8 +47,8 @@ export default function Navbar() {
               <Image
                 src="/logo.jpeg"
                 alt="TrueNorth Logo"
-                width={50}
-                height={50}
+                width={100}
+                height={120}
               />
             </Link>
 
