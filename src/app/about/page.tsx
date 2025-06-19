@@ -23,7 +23,7 @@ const itemVariants = {
 
 export default function About() {
   return (
-    <div className="container mx-auto px-4 py-16">
+    <div className="container mx-auto px-4 py-16 pt-36">
       {/* Hero Section */}
       <motion.div
         className="text-center mb-24"

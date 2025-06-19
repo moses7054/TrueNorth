@@ -6,7 +6,7 @@ const imageNumbers = [...Array(74).keys()].map((n) => `${n + 1}TN.jpeg`);
 
 export default function Gallery() {
   return (
-    <div className="container mx-auto px-4 py-16">
+    <div className="container mx-auto px-4 py-16 pt-36">
       <div className="text-center mb-12">
         <h1 className="text-4xl md:text-5xl font-bold text-[#1a365d] mb-4">
           Gallery

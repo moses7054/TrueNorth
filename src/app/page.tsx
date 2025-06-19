@@ -26,11 +26,11 @@ export default function Home() {
   return (
     <div className="space-y-32">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+      <section className="relative min-h-screen flex items-center overflow-hidden bg-white">
         {/* Background Grid */}
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff10_1px,transparent_1px),linear-gradient(to_bottom,#ffffff10_1px,transparent_1px)] bg-[size:3rem_3rem]" />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/50 to-gray-900" />
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,#e5e7eb_1px,transparent_1px),linear-gradient(to_bottom,#e5e7eb_1px,transparent_1px)] bg-[size:3rem_3rem]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/50 to-white" />
         </div>
 
         {/* Main Content */}
@@ -39,7 +39,7 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
               {/* Left Column - Text Content */}
               <motion.div
-                className="text-white space-y-6 lg:space-y-8 lg:col-span-7"
+                className="text-gray-900 space-y-6 lg:space-y-8 lg:col-span-7"
                 initial="hidden"
                 animate="visible"
                 variants={containerVariants}
@@ -49,7 +49,7 @@ export default function Home() {
                   className="space-y-4 lg:space-y-6"
                 >
                   <motion.span
-                    className="inline-block px-4 py-2 bg-white/10 rounded-full text-sm font-medium backdrop-blur-sm border border-white/10"
+                    className="inline-block px-4 py-2 bg-[#1a365d]/10 rounded-full text-sm font-medium backdrop-blur-sm border border-[#1a365d]/20 text-[#1a365d]"
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.2 }}
@@ -58,13 +58,13 @@ export default function Home() {
                   </motion.span>
                   <motion.h1
                     variants={itemVariants}
-                    className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight leading-tight bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent"
+                    className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight leading-tight text-[#1a365d]"
                   >
                     Crafting Your Vision Into Reality
                   </motion.h1>
                   <motion.p
                     variants={itemVariants}
-                    className="text-lg md:text-xl text-gray-300 max-w-2xl leading-relaxed"
+                    className="text-lg md:text-xl text-gray-600 max-w-2xl leading-relaxed"
                   >
                     TrueNorth Buildworks delivers excellence in construction,
                     renovation, and maintenance services. Your trusted partner
@@ -78,7 +78,7 @@ export default function Home() {
                 >
                   <Link
                     href="/contact"
-                    className="inline-flex items-center px-6 py-3 lg:px-8 lg:py-4 bg-white text-gray-900 rounded-lg hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl font-medium group"
+                    className="inline-flex items-center px-6 py-3 lg:px-8 lg:py-4 bg-[#1a365d] text-white rounded-lg hover:bg-[#2c5282] transition-all duration-300 shadow-lg hover:shadow-xl font-medium group"
                   >
                     Get Started
                     <svg
@@ -97,7 +97,7 @@ export default function Home() {
                   </Link>
                   <Link
                     href="/services"
-                    className="inline-flex items-center px-6 py-3 lg:px-8 lg:py-4 bg-transparent border-2 border-white/20 text-white rounded-lg hover:bg-white/10 transition-all duration-300 font-medium group"
+                    className="inline-flex items-center px-6 py-3 lg:px-8 lg:py-4 bg-transparent border-2 border-[#1a365d] text-[#1a365d] rounded-lg hover:bg-[#1a365d] hover:text-white transition-all duration-300 font-medium group"
                   >
                     Explore Services
                     <svg
@@ -119,7 +119,7 @@ export default function Home() {
                 {/* Stats */}
                 <motion.div
                   variants={itemVariants}
-                  className="grid grid-cols-3 gap-4 lg:gap-8 pt-6 lg:pt-8 border-t border-white/10"
+                  className="grid grid-cols-3 gap-4 lg:gap-8 pt-6 lg:pt-8 border-t border-gray-200"
                 >
                   {[
                     { number: "500+", label: "Projects Completed" },
@@ -127,10 +127,10 @@ export default function Home() {
                     { number: "100%", label: "Client Satisfaction" },
                   ].map((stat) => (
                     <div key={stat.label} className="text-center">
-                      <div className="text-2xl lg:text-3xl font-bold mb-1 lg:mb-2 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
+                      <div className="text-2xl lg:text-3xl font-bold mb-1 lg:mb-2 text-[#1a365d]">
                         {stat.number}
                       </div>
-                      <div className="text-xs lg:text-sm text-gray-400">
+                      <div className="text-xs lg:text-sm text-gray-600">
                         {stat.label}
                       </div>
                     </div>

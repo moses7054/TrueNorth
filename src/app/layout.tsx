@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} bg-white`}>
         <Navbar />
-        <main className="py-0">{children}</main>
+        <main>{children}</main>
         <footer className="border-t border-gray-100 mt-16 bg-gray-50">
           <div className="container mx-auto px-4 py-12">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -55,6 +55,22 @@ export default function RootLayout({
                       className="text-gray-600 hover:text-[#1a365d] text-sm"
                     >
                       Services
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/gallery"
+                      className="text-gray-600 hover:text-[#1a365d] text-sm"
+                    >
+                      Gallery
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/about"
+                      className="text-gray-600 hover:text-[#1a365d] text-sm"
+                    >
+                      About Us
                     </Link>
                   </li>
                   <li>

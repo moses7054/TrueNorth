@@ -28,21 +28,19 @@ export default function Navbar() {
   return (
     <>
       <header
-        className={`w-full z-[100] transition-all duration-300 ${
-          isHomePage ? "fixed top-0 left-0 right-0" : "relative"
-        } ${
+        className={`w-full z-[100] transition-all duration-300 fixed top-0 left-0 right-0 ${
           isHomePage
             ? isScrolled
-              ? "bg-gray-900 backdrop-blur-md"
+              ? "bg-white/80 backdrop-blur-md border-b border-gray-200/50"
               : "bg-transparent"
-            : "bg-gray-900 backdrop-blur-md"
+            : "bg-white/80 backdrop-blur-md border-b border-gray-200/50"
         }`}
       >
         <nav className="h-24 pl-[14px] pr-1.5 sm:px-12 lg:px-16">
           <div className="flex items-center justify-between container mx-auto h-full">
             <Link
               href="/"
-              className="text-xl md:text-2xl font-bold text-white hover:text-gray-200 transition-colors"
+              className="text-xl md:text-2xl font-bold text-[#1a365d] hover:text-[#2c5282] transition-colors"
             >
               <Image
                 src="/logo.jpeg"
@@ -56,31 +54,51 @@ export default function Navbar() {
             <div className="hidden md:flex space-x-8">
               <Link
                 href="/"
-                className="text-base text-white hover:text-gray-200 transition-colors"
+                className={`text-base transition-colors font-medium ${
+                  pathname === "/"
+                    ? "text-[#2c5282] font-bold underline underline-offset-4"
+                    : "text-[#1a365d] hover:text-[#2c5282]"
+                }`}
               >
                 Home
               </Link>
               <Link
                 href="/services"
-                className="text-base text-white hover:text-gray-200 transition-colors"
+                className={`text-base transition-colors font-medium ${
+                  pathname === "/services"
+                    ? "text-[#2c5282] font-bold underline underline-offset-4"
+                    : "text-[#1a365d] hover:text-[#2c5282]"
+                }`}
               >
                 Services
               </Link>
               <Link
                 href="/gallery"
-                className="text-base text-white hover:text-gray-200 transition-colors"
+                className={`text-base transition-colors font-medium ${
+                  pathname === "/gallery"
+                    ? "text-[#2c5282] font-bold underline underline-offset-4"
+                    : "text-[#1a365d] hover:text-[#2c5282]"
+                }`}
               >
                 Gallery
               </Link>
               <Link
                 href="/about"
-                className="text-base text-white hover:text-gray-200 transition-colors"
+                className={`text-base transition-colors font-medium ${
+                  pathname === "/about"
+                    ? "text-[#2c5282] font-bold underline underline-offset-4"
+                    : "text-[#1a365d] hover:text-[#2c5282]"
+                }`}
               >
                 About Us
               </Link>
               <Link
                 href="/contact"
-                className="text-base text-white hover:text-gray-200 transition-colors"
+                className={`text-base transition-colors font-medium ${
+                  pathname === "/contact"
+                    ? "text-[#2c5282] font-bold underline underline-offset-4"
+                    : "text-[#1a365d] hover:text-[#2c5282]"
+                }`}
               >
                 Contact
               </Link>
@@ -88,7 +106,7 @@ export default function Navbar() {
 
             {/* Mobile Menu Button */}
             <button
-              className="md:hidden text-white p-2"
+              className="md:hidden text-[#1a365d] p-2"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle menu"
             >
@@ -113,12 +131,12 @@ export default function Navbar() {
       {/* Mobile Menu - moved outside header/nav for proper overlay */}
       {isMobileMenuOpen && (
         <div
-          className="md:hidden fixed inset-0 bg-gray-900/95 backdrop-blur-md z-[9999] transition-transform duration-300 ease-in-out"
+          className="md:hidden fixed inset-0 bg-white/95 backdrop-blur-md z-[9999] transition-transform duration-300 ease-in-out"
           style={{ top: 0, left: 0, right: 0, bottom: 0 }}
         >
           {/* Close Button */}
           <button
-            className="absolute top-4 right-4 text-white p-2 z-[10000]"
+            className="absolute top-4 right-4 text-[#1a365d] p-2 z-[10000]"
             onClick={() => setIsMobileMenuOpen(false)}
             aria-label="Close menu"
           >
@@ -139,31 +157,51 @@ export default function Navbar() {
           <div className="flex flex-col items-center justify-center h-full space-y-8">
             <Link
               href="/"
-              className="text-xl text-white hover:text-gray-200 transition-colors"
+              className={`text-xl transition-colors font-medium ${
+                pathname === "/"
+                  ? "text-[#2c5282] font-bold"
+                  : "text-[#1a365d] hover:text-[#2c5282]"
+              }`}
             >
               Home
             </Link>
             <Link
               href="/services"
-              className="text-xl text-white hover:text-gray-200 transition-colors"
+              className={`text-xl transition-colors font-medium ${
+                pathname === "/services"
+                  ? "text-[#2c5282] font-bold"
+                  : "text-[#1a365d] hover:text-[#2c5282]"
+              }`}
             >
               Services
             </Link>
             <Link
               href="/gallery"
-              className="text-xl text-white hover:text-gray-200 transition-colors"
+              className={`text-xl transition-colors font-medium ${
+                pathname === "/gallery"
+                  ? "text-[#2c5282] font-bold"
+                  : "text-[#1a365d] hover:text-[#2c5282]"
+              }`}
             >
               Gallery
             </Link>
             <Link
               href="/about"
-              className="text-xl text-white hover:text-gray-200 transition-colors"
+              className={`text-xl transition-colors font-medium ${
+                pathname === "/about"
+                  ? "text-[#2c5282] font-bold"
+                  : "text-[#1a365d] hover:text-[#2c5282]"
+              }`}
             >
               About Us
             </Link>
             <Link
               href="/contact"
-              className="text-xl text-white hover:text-gray-200 transition-colors"
+              className={`text-xl transition-colors font-medium ${
+                pathname === "/contact"
+                  ? "text-[#2c5282] font-bold"
+                  : "text-[#1a365d] hover:text-[#2c5282]"
+              }`}
             >
               Contact
             </Link>

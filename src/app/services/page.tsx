@@ -252,7 +252,7 @@ const services = [
 
 export default function Services() {
   return (
-    <div className="container mx-auto px-4 py-16">
+    <div className="container mx-auto px-4 py-16 pt-36">
       <motion.div
         className="text-center mb-16"
         initial="hidden"
