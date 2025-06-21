@@ -7,7 +7,7 @@ import Link from "next/link";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "True North Construction",
+  title: "TrueNorth Buildworks",
   description: "Your trusted partner in construction and renovation services",
 };
 
