@@ -36,7 +36,7 @@ export default function Navbar() {
             : "bg-white/80 backdrop-blur-md border-b border-gray-200/50"
         }`}
       >
-        <nav className="h-24 pl-[14px] pr-1.5 sm:px-12 lg:px-16">
+        <nav className="h-24 lg:h-32 pl-[14px] pr-1.5 sm:px-12 ">
           <div className="flex items-center justify-between container mx-auto h-full">
             <Link
               href="/"
@@ -47,6 +47,9 @@ export default function Navbar() {
                 alt="TrueNorth Logo"
                 width={100}
                 height={120}
+                className={` 
+                  w-[50px] h-[50px] lg:h-[120px] lg:w-[120px]
+                `}
               />
             </Link>
 
