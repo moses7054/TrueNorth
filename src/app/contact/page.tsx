@@ -23,7 +23,7 @@ const itemVariants = {
 
 export default function Contact() {
   return (
-    <div className="container mx-auto px-4 py-16 pt-36">
+    <div className="container mx-auto px-4 py-16 pt-36 lg:pt-56">
       <motion.div
         className="text-center mb-16"
         initial="hidden"

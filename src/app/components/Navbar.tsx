@@ -48,7 +48,7 @@ export default function Navbar() {
                 width={100}
                 height={120}
                 className={` 
-                  w-[50px] h-[50px] lg:h-[120px] lg:w-[120px]
+                  w-[50px] h-[50px] lg:h-[80px] lg:w-[80px]
                 `}
               />
             </Link>
